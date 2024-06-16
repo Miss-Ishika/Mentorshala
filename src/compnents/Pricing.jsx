@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import {fadeIn} from './varient'
+import { motion } from 'framer-motion';
 
 const Pricing = () => {
 
@@ -12,7 +14,7 @@ const Pricing = () => {
 
 
   return (
-    <div className='md:px-14 p-4 max-w-s mx-auto py-10'>
+    <div className='md:px-14 p-4 max-w-s mx-auto py-10' id='pricing'>
         <div className='text-center'>
             <h2 className='md:text-5xl text-3xl font-extrabold text-primary mb-2'>Here are all the plans</h2>
             <p className='text-tartiary md:w-1/3 mx-auto px-4'>He scolded himself for being so tentative. He knew he shouldn't be so cautious, but there was a sixth sense telling him that things weren't exactly as they appeared. It was that weird chill that rolls up your neck and makes the hair stand on end. He knew that being so tentative could end up costing him the job, but he learned that listening to his sixth sense usually kept him from getting into a lot of trouble.</p>
@@ -29,7 +31,12 @@ const Pricing = () => {
             </div>
         </div>
 
-        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-20 md:w-11/12 mx-auto'>
+        <motion.div
+        variants={fadeIn("up", 0.2)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{once:false, amount: 0.5}}
+         className='grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-20 md:w-11/12 mx-auto'>
             {
                 packages.map((pkg, index) => <div key={index} className='border py-10 md:px-10 px-4 rounded-lg shadow-3xl'>
                 <h3 className='text-3xl font-bold text-center'>{pkg.name}</h3>
@@ -53,7 +60,7 @@ const Pricing = () => {
                 </div>
                 </div>)
             }
-        </div>
+        </motion.div>
     </div>
   )
 }
