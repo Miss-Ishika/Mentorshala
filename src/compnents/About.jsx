@@ -43,7 +43,7 @@ const About = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{once:false, amount: 0.7}}
-             className="md:w-2/5">
+             className="md:w-2/5 mx-20">
                 <h2 className="md:text-5xl text-3xl font-bold text-primary mb-5 leading-normal">We have been improving our product <span className="text-secondary">for many years.</span></h2>
                 <p className="text-tartiary text-lg mb-7">You can decide what you want to do in life, but I suggest doing something that creates. Something that leaves a tangible thing once you're done. That way even after you're gone, you will still live on in the things you created.</p>
                 <button className='py-3 px-8 bg-secondary font-semibold text-white rounded
