@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Home = () => {
   return (
-    <div className="md:px-12 p-4 max-w-screen-2x1 mx-auto mt-20" id='home'>
+    <div className="md:px-12 p-4 max-w-screen-2x1 mx-auto mt-40" id='home'>
         <div className='gradientBg rounded-xl rounded-br-[80px] md:p-9 px-4 py-9'>
             <div className='flex flex-col md:flex-row-reverse justify-between items-center gap-10'>
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {fadeIn} from './varient'
 import { motion } from 'framer-motion';
+// import "./Pricing.css"
 
 const Pricing = () => {
 
@@ -35,10 +36,10 @@ const Pricing = () => {
         variants={fadeIn("up", 0.2)}
                 initial="hidden"
                 whileInView={"show"}
-                viewport={{once:false, amount: 0.5}}
-         className='grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-20 md:w-11/12 mx-auto'>
+                viewport={{once:false, amount: 0.1}}
+                className='grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-20 md:w-11/12 mx-auto zoom'>
             {
-                packages.map((pkg, index) => <div key={index} className='border py-10 md:px-10 px-4 rounded-lg shadow-3xl'>
+                packages.map((pkg, index) => <div key={index} className='border py-10 md:px-10 px-4 rounded-lg shadow-3xl hover:shadow-2xl'>
                 <h3 className='text-3xl font-bold text-center'>{pkg.name}</h3>
                 <p className='text-tartiary text-center my-5'>{pkg.description}</p>
                 <p className='mt-5 text-center text-secondary text-4xl font-bold'>
