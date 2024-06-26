@@ -19,9 +19,13 @@ const Sidebar = () => {
             <ul className='flex flex-col'>
                     {
                         profiles.map((profile, index) => (
-                            <li key={index} style={{backgroundColor: profile.bgcolor }} className='w-10 my-1 p-2 bg-primary rounded-3xl text-white
-                            hover:bg-violet-600'>
-                                <a href={profile.link}>{profile.icon}</a>
+                            <li key={index}>
+                                <a href={profile.link} className='flex'>
+                                    {/* <div style={{backgroundColor: profile.bgcolor }} className='my-1 p-2 w-0 rounded-r-3xl text-white
+                            hover:bg-violet-600'>{profile.pname}</div> */}
+                                    <div style={{backgroundColor: profile.bgcolor }} className='w-10 my-1 p-2 bg-primary rounded-3xl text-white
+                            hover:bg-violet-600'>{profile.icon}</div>
+                                </a>
                             </li>
                         ))
                     }

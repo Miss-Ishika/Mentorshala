@@ -27,7 +27,7 @@ function App() {
       <Newsletter />
       <AboutMe />
       <Footer />
-      
+      <Popup/>
     </>
   )
 }
